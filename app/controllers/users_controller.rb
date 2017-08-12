@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if session[:user_id] != @user.id
       redirect_to root_path
     elsif @user.admin
-        @role = "ADMIN"
+        render '/users/admin'
     end
   end
 
